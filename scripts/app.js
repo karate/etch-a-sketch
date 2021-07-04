@@ -1,4 +1,4 @@
-class App {
+class Etch {
 	constructor() {
 		this.brushSize = 1;
 		var canvas = document.getElementById('sketch');
@@ -58,7 +58,7 @@ class App {
 }
 
 window.onload = function(){
-	window.app = new App();
+	var app = new Etch();
 
 	var keysPressed = {};
 
@@ -82,24 +82,24 @@ window.onload = function(){
 				break;
 
 			case ' ':
-				if (window.app.currentColor == 'black') {
-					window.app.currentColor = 'red';
+				if (app.currentColor == 'black') {
+					app.currentColor = 'red';
 					document.getElementById('color-red').checked = true;
 				}
 				else {
-					window.app.currentColor = 'black';
+					app.currentColor = 'black';
 					document.getElementById('color-black').checked = true;
 				}
 				break;
 
 			case ';':
-				if (window.app.speed == 1) {
+				if (app.speed == 1) {
 					document.getElementById('speed-double').click();
 				}
-				else if (window.app.speed == 2) {
+				else if (app.speed == 2) {
 					document.getElementById('speed-half').click();
 				}
-				else if (window.app.speed == 0.5) {
+				else if (app.speed == 0.5) {
 					document.getElementById('speed-normal').click();
 				}
 				break;
@@ -113,44 +113,44 @@ window.onload = function(){
 
 	function drawInterval() {
 		if (keysPressed['a']) {
-			window.app.moveLeft();
+			app.moveLeft();
 		}
 		if (keysPressed['s']) {
-			window.app.moveRight();
+			app.moveRight();
 		}
 		if (keysPressed['k']) {
-			window.app.moveUp();
+			app.moveUp();
 		}
 		if (keysPressed['l']) {
-			window.app.moveDown();
+			app.moveDown();
 		}
 	};
 	
-	var interval = setInterval(drawInterval, 20/window.app.speed);
+	var interval = setInterval(drawInterval, 20/app.speed);
 
 	document.getElementById('speed-half').addEventListener('click', function() {
 		clearInterval(interval);
-		window.app.speed = 0.5;
-		interval = setInterval(drawInterval, 20/window.app.speed);
+		app.speed = 0.5;
+		interval = setInterval(drawInterval, 20/app.speed);
 	});
 
 	document.getElementById('speed-normal').addEventListener('click', function() {
 		clearInterval(interval);
-		window.app.speed = 1;
-		interval = setInterval(drawInterval, 20/window.app.speed);
+		app.speed = 1;
+		interval = setInterval(drawInterval, 20/app.speed);
 	});
 
 	document.getElementById('speed-double').addEventListener('click', function() {
 		clearInterval(interval);
-		window.app.speed = 2;
-		interval = setInterval(drawInterval, 20/window.app.speed);
+		app.speed = 2;
+		interval = setInterval(drawInterval, 20/app.speed);
 	});
 
 	document.getElementById('color-red').addEventListener('click', function() {
-		window.app.setColor('red');
+		app.setColor('red');
 	});
 
 	document.getElementById('color-black').addEventListener('click', function() {
-		window.app.setColor('black');
+		app.setColor('black');
 	});
 }
