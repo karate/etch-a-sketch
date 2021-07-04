@@ -80,7 +80,18 @@ window.onload = function(){
 			case 'l':
 				keysPressed[key] = true;
 				break;
-		}
+
+			case ' ':
+				if (window.app.currentColor == 'black') {
+					window.app.currentColor = 'red';
+					document.getElementById('color-red').checked = true;
+				}
+				else {
+					window.app.currentColor = 'black';
+					document.getElementById('color-black').checked = true;
+				}
+				break;
+			}
 	});
 
 	document.addEventListener('keyup', function(e){
