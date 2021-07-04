@@ -4,7 +4,8 @@ body {
 
 h1 {
   text-align: center;
-  border: 1px dashed;
+  border: 1px solid;
+  box-shadow: 3px 3px 0px 0px #313131;
   background-color: white;
   margin-bottom: 0;
   padding: 10px;
@@ -17,23 +18,24 @@ h2 {
 h3 {
   margin-bottom: 0;
 }
+
 .container {
-  width: 1300px;
+  width: 1260px;
 }
+
 aside {
   float: left;
   width: 200px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .container > .etch {
   float: left;
   background-color: red;
-  box-shadow: 5px 5px 8px 0 black;
-  width: 800px;
+  box-shadow: 7px 7px 0px 0 black;
   height: 600px;
   padding: 110px;
-  margin: 10px;
+  margin: 20px 0 0 20px;
   border-radius: 10px;
   position: relative;
 }
@@ -63,7 +65,8 @@ canvas#sketch {
 }
 
 aside > section {
-  border: 1px dashed;
+  border: 1px solid;
+  box-shadow: 3px 3px 0px 0px #313131;
   margin-bottom: 10px;
   padding: 10px;
   background-color: white;
@@ -88,6 +91,7 @@ section.controls .key {
   min-width: 30px;
   text-align: center;
   padding: 0 5px;
+  box-shadow: 2px 2px 0 0 #000;
 }
 
 section.controls .action {
@@ -95,8 +99,25 @@ section.controls .action {
   font-size: 19px;
 }
 
-section.options .speed .speed-option {
+section.options input {
+  display: none;
 }
 
-section.options .speed input {
+section.options label {
+  display: block;
+}
+
+section.options .speed .speed-option,
+section.options .color .color-option {
+  margin: 7px;
+  padding: 5px;
+  box-shadow: 2px 2px 0 0 #000;
+  border: 1px solid;
+}
+
+section.options .speed .speed-option.selected,
+section.options .color .color-option.selected {
+ box-shadow: none;
+  margin: 9px 5px 5px 9px;
+  background-color: #eee;
 }

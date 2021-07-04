@@ -84,11 +84,11 @@ window.onload = function(){
 			case ' ':
 				if (app.currentColor == 'black') {
 					app.currentColor = 'red';
-					document.getElementById('color-red').checked = true;
+					document.getElementById('color-red').click();
 				}
 				else {
 					app.currentColor = 'black';
-					document.getElementById('color-black').checked = true;
+					document.getElementById('color-black').click();
 				}
 				break;
 
@@ -153,4 +153,22 @@ window.onload = function(){
 	document.getElementById('color-black').addEventListener('click', function() {
 		app.setColor('black');
 	});
+
+	var optionElements = document.getElementsByTagName('input');
+	for (var i = 0; i < optionElements.length; i++) {
+		let input = optionElements[i];
+		input.addEventListener('change', function(e){
+			for (var j = 0; j < optionElements.length; j++) {
+				if (optionElements[j].checked == false)
+					optionElements[j].parentElement.classList.remove('selected');
+			}
+			input.parentElement.classList.add('selected');
+			if (input.checked) {
+				input.classList.add('selected');
+			}
+			else {
+				input.classList.remove('selected');
+			}
+		});
+	}
 }
