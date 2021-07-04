@@ -91,6 +91,18 @@ window.onload = function(){
 					document.getElementById('color-black').checked = true;
 				}
 				break;
+
+			case ';':
+				if (window.app.speed == 1) {
+					document.getElementById('speed-double').click();
+				}
+				else if (window.app.speed == 2) {
+					document.getElementById('speed-half').click();
+				}
+				else if (window.app.speed == 0.5) {
+					document.getElementById('speed-normal').click();
+				}
+				break;
 			}
 	});
 
