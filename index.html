@@ -13,7 +13,7 @@
       <aside>
         <section class="controls">
           <h2>Controls</h2>
-          <div class="key-list">
+          <div class="control-list">
             <div class="control"><span class="key">a</span><span class="action">&#x2190;</span></div>
             <div class="control"><span class="key">s</span><span class="action">&#x2192;</span></div>
             <div class="control"><span class="key">k</span><span class="action">&#x2191;</span></div>
@@ -25,19 +25,29 @@
           <h2>Options</h2>
           <section class="speed">
             <h3>Speed</h3>
-            <input type="radio" name="speed" id="speed-half"/>
-            <label for="speed-half">Slow</label>
-            <input type="radio" name="speed" id="speed-normal" checked/>
-            <label for="speed-normal">Normal</label>
-            <input type="radio" name="speed" id="speed-double"/>
-            <label for="speed-double">Fast</label>
+            <div class="speed-option">
+              <input type="radio" name="speed" id="speed-half"/>
+              <label for="speed-half">Slow</label>
+            </div>
+            <div class="speed-option">
+              <input type="radio" name="speed" id="speed-normal" checked/>
+              <label for="speed-normal">Normal</label>
+            </div>
+            <div class="speed-option">
+              <input type="radio" name="speed" id="speed-double"/>
+              <label for="speed-double">Fast</label>
+            </div>
           </section>
           <section class="color">
             <h3>Color</h3>
-            <input type="radio" name="color" id="color-black" checked/>
-            <label for="color-black">Black</label>
-            <input type="radio" name="color" id="color-red"/>
-            <label for="color-red">Red</label>
+            <div class="speed-option">
+              <input type="radio" name="color" id="color-black" checked/>
+              <label for="color-black">Black</label>
+            </div>
+            <div class="speed-option">
+              <input type="radio" name="color" id="color-red"/>
+              <label for="color-red">Red</label>
+            </div>
           </section>
         </section>
       </aside>

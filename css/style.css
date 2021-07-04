@@ -10,6 +10,10 @@ h2 {
   margin-top: 0;
 }
 
+h3 {
+  margin-bottom: 0;
+}
+
 aside {
   float: left;
   width: 200px;
@@ -55,9 +59,10 @@ aside > section {
   border: 1px dashed;
   margin: 5px 0;
   padding: 6px;
+  background-color: white;
 }
 
-section.controls .key-list {
+section.controls .control-list {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-gap: 10px;
@@ -81,4 +86,10 @@ section.controls .key {
 section.controls .action {
   margin-left: 7px;
   font-size: 19px;
+}
+
+section.options .speed .speed-option {
+}
+
+section.options .speed input {
 }
