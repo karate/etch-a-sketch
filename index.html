@@ -11,15 +11,36 @@
     <div class="container">
       <h1>Etch A Sketch</h1>
       <aside>
-        <h2>Controls:</h2>
-        <ul class="controls">
-          <li>a &#x2190;</li>
-          <li>s &#x2192;</li>
-        </ul>
-        <ul class="controls">
-          <li>k &#x2191;</li>
-          <li>l &#x2193;</li>
-        </ul>
+        <section class="controls">
+          <h2>Controls</h2>
+          <ul class="controls">
+            <li>a &#x2190;</li>
+            <li>s &#x2192;</li>
+          </ul>
+          <ul class="controls">
+            <li>k &#x2191;</li>
+            <li>l &#x2193;</li>
+          </ul>
+        </section>
+        <section class="options">
+          <h2>Options</h2>
+          <section class="speed">
+            <h3>Speed</h3>
+            <input type="radio" name="speed" id="speed-half"/>
+            <label for="speed-half">Slow</label>
+            <input type="radio" name="speed" id="speed-normal" checked/>
+            <label for="speed-normal">Normal</label>
+            <input type="radio" name="speed" id="speed-double"/>
+            <label for="speed-double">Fast</label>
+          </section>
+          <section class="color">
+            <h3>Color</h3>
+            <input type="radio" name="color" id="color-black" checked/>
+            <label for="color-black">Black</label>
+            <input type="radio" name="color" id="color-red"/>
+            <label for="color-red">Red</label>
+          </section>
+        </section>
       </aside>
       <div class="etch">
         <canvas id="sketch" width="800" height="600">Browser not supported</canvas>
